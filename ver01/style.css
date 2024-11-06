@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 200vh; /* ページをスクロール可能にするために */
+    font-family: Arial, sans-serif;
+}
+
+.fixed-image-wrapper {
+    position: fixed; /* 画像を固定 */
+    top: 0;
+    left: 0;
+    width: 100%; /* 幅を100%に設定 */
+    height: 100vh; /* ビューポートの高さに合わせる */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1; /* 背景として扱うため、他の要素の後ろに配置 */
+}
+
+.main-visual {
+    width: 100%; /* 横幅を100%に設定 */
+    height: auto; /* 高さは自動調整（アスペクト比を保つ） */
+    max-height: none; /* 高さに制限を設けない */
+    object-fit: cover; /* アスペクト比を維持しつつ、コンテナをカバーする */
+}
+
+.logo {
+    position: absolute; /* ロゴを絶対位置に配置 */
+    top: 50%; /* 垂直方向で中央 */
+    left: 50%; /* 水平方向で中央 */
+    transform: translate(-50%, -50%); /* 真ん中に配置 */
+    width: 100px; /* ロゴの幅 */
+    height: auto; /* 高さは自動調整 */
+    z-index: 1; /* ロゴを円の下に表示 */
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 94px; /* 初期幅 */
+    height: 51px; /* 初期高さ */
+    border-radius: 215px; /* 楕円に設定 */
+    background-color: rgba(42, 76, 98, 0); /* 初期状態は透明 */
+    filter: blur(20px);
+    z-index: 2; /* 円をロゴの上に表示 */
+}
+
+ .ishoten-toha {
+    position: absolute; /* ロゴを絶対位置に配置 */
+    top: 50%; /* 垂直方向で中央 */
+    left: 50%; /* 水平方向で中央 */
+    transform: translate(-50%, -50%); /* 真ん中に配置 */
+    width: 100px; /* ロゴの幅 */
+    height: auto; /* 高さは自動調整 */
+    z-index: 1; /* ロゴを円の下に表示 */
+}
+
+.content {
+    position: relative;
+    z-index: 3; /* コンテンツが円とロゴの上に表示される */
+    margin: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+}
