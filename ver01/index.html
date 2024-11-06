@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style copy.css" />
+    <title>test video</title>
+</head>
+
+<body>
+    <div class="text-section">
+      <h2>スクロールしてください</h2>
+      <p>
+          ここに概要が入ります。ここに概要が入ります。
+      </p>
+    </div>
+    
+    <div class="video-section">
+      <div id="scrolly-video"></div>
+    </div>
+    
+    <div class="text-section">
+      <h2>タイトルが入ります</h2>
+      <p>
+          ここに概要が入ります。ここに概要が入ります。
+      </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script>
+    <script type="text/javascript">
+      new ScrollyVideo({
+        scrollyVideoContainer: "scrolly-video",
+        src: "https://scrollyvdeo.js.org/goldengate.mp"
+      });
+    </script>
+
+</body>
+</html>
