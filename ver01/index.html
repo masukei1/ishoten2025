@@ -3,36 +3,29 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style copy.css" />
-    <title>test video</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>意匠展</title>
 </head>
-
 <body>
-    <div class="text-section">
-      <h2>スクロールしてください</h2>
-      <p>
-          ここに概要が入ります。ここに概要が入ります。
-      </p>
-    </div>
     
-    <div class="video-section">
-      <div id="scrolly-video"></div>
+    <div class="fixed-image-wrapper">
+        <img class="main-visual" src="image/main-visual.png" alt="Main Visual" />
+        <img class="logo" src="image/logo.svg" alt="logo">
+        <div class="circle"></div>
     </div>
-    
-    <div class="text-section">
-      <h2>タイトルが入ります</h2>
-      <p>
-          ここに概要が入ります。ここに概要が入ります。
-      </p>
-    </div>
+
+    <script src="script.js"></script>
+
+    <div id="scrolly-video"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script>
     <script type="text/javascript">
-      new ScrollyVideo({
-        scrollyVideoContainer: "scrolly-video",
-        src: "https://scrollyvdeo.js.org/goldengate.mp"
-      });
+        new ScrollyVideo({
+            scrollyVideoContainer: "scrolly-video",
+            src: "https://scrollyvideo.js.org/goldengate.mp4"
+            });
     </script>
 
+    
 </body>
 </html>
